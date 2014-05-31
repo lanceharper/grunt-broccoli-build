@@ -38,7 +38,7 @@ module.exports = function (grunt) {
             // Deal with differences in Broccoli versions.
             var dir = typeof results === 'string' ? results : results.directory;
 
-            ncp(dir, dest, function (err) {
+            ncp(dir.directory, dest, function (err) {
                 if (err) { throw err; }
 
                 grunt.log.ok();
